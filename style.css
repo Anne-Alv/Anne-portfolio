@@ -151,7 +151,7 @@ nav .right a span {
     height: 280px;
     object-fit: cover;
     border-radius: 50%;
-    border: 8px solid #2a2a2a;
+    border: 8px solid var(--text-color);
 }
 
 /* section 02: Skills */
