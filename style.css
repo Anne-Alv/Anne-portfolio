@@ -359,14 +359,20 @@ form button {
 @media (max-width: 768px) {
 
     nav {
-        padding: 20px;
-        flex-direction: column;
+        padding:15px 20px;
         height: auto;
-        gap: 15px;
     }
 
     nav .right a {
-        font-size: 22px;
+        font-size: 18px;
+        margin:0;
+    }
+    nav .right {
+        display: flex;
+        gap: 15px;
+    }
+     nav .left a {
+        font-size: 18px;
     }
 
     nav .right a:last-child {
