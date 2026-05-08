@@ -375,12 +375,6 @@ form button {
         font-size: 18px;
     }
 
-    nav .right a:last-child {
-        color: var(--text-color);
-        background-color: transparent;
-        padding: 0;
-    }
-
     nav .right a span {
         display: none;
     }
