@@ -382,7 +382,7 @@ form button {
     .hero-section {
         flex-direction: column;
         text-align: center;
-        padding: 40px 20px;
+        padding: 50px 30px;
         gap: 30px;
     }
 
@@ -406,7 +406,7 @@ form button {
     .skills-section,
     .blog-section,
     .contact-section {
-        padding: 40px 20px;
+        padding: 50px 30px;
     }
 
     .skills-grid {
