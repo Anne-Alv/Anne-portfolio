@@ -31,48 +31,26 @@ window.addEventListener('scroll', () => {
 // 3. SKILL BAR ANIMATION
 // ==============================
 
-// Animates skill bars when they scroll into view
 const skillBars = document.querySelectorAll('.bar span');
 
-const animateBars = (entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.width = entry.target.className
-                ? getComputedStyle(entry.target).getPropertyValue('width')
-                : '0%';
-            entry.target.style.transition = 'width 1s ease';
-            observer.unobserve(entry.target);
-        }
-    });
-};
-
-// First set all bars to 0, then animate them in
+// set initial state
 skillBars.forEach(bar => {
-    const finalWidth = getComputedStyle(bar).width;
-    bar.dataset.width = finalWidth;
     bar.style.width = '0';
 });
 
-const barObserver = new IntersectionObserver(animateBars, {
-    threshold: 0.3
-});
-
-skillBars.forEach(bar => {
-    barObserver.observe(bar);
-});
-
-// Trigger width animation on intersect
-const skillObserver = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.width = entry.target.dataset.width;
-            entry.target.style.transition = 'width 1.2s ease';
-            skillObserver.unobserve(entry.target);
+            const bar = entry.target;
+            bar.style.width = bar.dataset.width;
+            bar.style.transition = 'width 1.2s ease-out';
+            obs.unobserve(bar);
         }
     });
-}, { threshold: 0.3 });
+}, { threshold: 0.4 });
 
-skillBars.forEach(bar => skillObserver.observe(bar));
+// observe bars
+skillBars.forEach(bar => observer.observe(bar));
 
 
 // ==============================
