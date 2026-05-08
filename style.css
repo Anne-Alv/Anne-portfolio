@@ -189,6 +189,7 @@ nav .right a span {
     height: 100%;
     background:var(--link-color);
     border-radius: 20px;
+    width: 0;
 }
 
 @keyframes fill {
