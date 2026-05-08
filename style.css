@@ -357,43 +357,75 @@ form button {
 }
 
 @media (max-width: 600px) {
+
     nav {
-        padding: 0 20px;
+        padding: 20px;
+        flex-direction: column;
+        height: auto;
+        gap: 15px;
     }
+
     nav .right a {
         font-size: 22px;
     }
+
     nav .right a:last-child {
         color: var(--text-color);
         background-color: transparent;
         padding: 0;
     }
+
     nav .right a span {
         display: none;
     }
+
     .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
         padding: 40px 20px;
+        gap: 30px;
     }
+
+    .hero-section .headshot img {
+        width: 220px;
+        height: 220px;
+    }
+
     .hero-section .text h1,
     .hero-section .text h3 {
         font-size: 30px;
     }
-    .skills-section {
-        padding: 40px 20px;
+
+    .hero-section .text .links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
     }
-    .blog-section {
-        padding: 40px 20px;
-    }
+
+    .skills-section,
+    .blog-section,
     .contact-section {
         padding: 40px 20px;
     }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-container {
+        grid-template-columns: 1fr;
+    }
+
     .contact-container {
         flex-direction: column;
     }
+
     .contact-left,
     .contact-right {
         width: 100%;
     }
+
 }
 /*js*/
 nav .right a.active {
