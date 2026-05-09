@@ -347,14 +347,6 @@ form button {
     }
 }
 
-@media (max-width: 740px) {
-    .hero-section {
-        flex-direction: column-reverse;
-    }
-    .hero-section .headshot img {
-        width: 300px;
-    }
-}
 
 @media (max-width: 768px) {
 
