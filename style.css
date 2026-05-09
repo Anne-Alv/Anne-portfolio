@@ -192,16 +192,6 @@ nav .right a span {
     width: 0;
 }
 
-@keyframes fill {
-    from { width: 0; }
-}
-
-.html   { width: 90%; }
-.css    { width: 85%; }
-.js     { width: 30%; }
-.python { width: 50%; }
-.php    { width: 45%; }
-.ui     { width: 75%; }
 
 /* Blog section */
 .blog-section {
